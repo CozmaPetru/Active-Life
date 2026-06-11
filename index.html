@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+
     <link href="./src/output.css" rel="stylesheet">
 </head>
 
@@ -93,125 +96,230 @@
     <!-- Programe Populare -->
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Antet -->
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold uppercase tracking-wide text-[#212121]">
                     PROGRAME <span class="text-[#e53935]">POPULARE</span>
                 </h2>
                 <div class="mx-auto mt-4 h-1 w-16 bg-[#e53935] rounded-full"></div>
             </div>
-            <!-- Grid -->
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                <!-- Titlu 1 -->
-                <a href="programs.html" class="block group overflow-hidden rounded-2xl relative aspect-3/4">
-                    <img src="./img/programs/forta.webp"
-                        alt="Program Forță Active Life"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                    <div
-                        class="flex flex-col justify-end  absolute inset-0  items-start p-5">
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-7">
+                <a class="block group overflow-hidden rounded-2xl relative aspect-3/4 cursor-pointer">
+                    <img src="./img/programs/forta.webp" alt="Program Forță Active Life"
+                        class="w-full h-full brightness-70 object-cover transition-transform duration-500 group-hover:scale-110" />
+                    <div class="flex flex-col justify-end absolute inset-0 items-start p-5">
                         <h3 class="text-white text-xl font-bold uppercase tracking-wider">Forță</h3>
-                        <p class=" text-white text-[15px]">Construiește masă musculară cu programe de forță periodizate.</p>
-                    </div>
-                </a>
-                <!-- Titlu 2 -->
-                <a href="programs.html" class="block group overflow-hidden rounded-2xl relative aspect-3/4">
-                    <img src="./img/programs/Cardio.webp"
-                        alt="Program Cardio Active Life"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                    <div
-                        class="flex flex-col justify-end absolute inset-0 bg-gradient-to-top from-black/90 via-black/50 to-black/10  items-start p-5">
-                        <h3 class="text-white text-xl font-bold uppercase tracking-wider">Cardio</h3>
-                        <p>Arde caloriile cu sesiuni intense de HIT.</p>
-                    </div>
-                </a>
-                <!-- Titlu 3 -->
-                <a href="programs.html" class="block group overflow-hidden rounded-2xl relative aspect-3/4">
-                    <img src="./img/programs/Yoga.webp"
-                        alt="Program Yoga Active Life"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                    <div
-                        class="flex flex-col justify-end absolute inset-0 bg-gradient-to-top from-black/90 via-black/50 to-black/10  items-start p-5">
-                        <h3 class="text-white text-xl font-bold uppercase tracking-wider">Yoga</h3>
-                        <p>Îmbunătățește flexibilitatea, echilibrul și starea mentală.</p>
+                        <p class="hidden lg:block text-white text-[15px] font-medium tracking-wide mt-1">Construiește
+                            masă musculară cu programe de forță periodizate.</p>
                     </div>
                 </a>
 
-                <!-- Titlu 4 -->
-                <a href="programs.html" class="block group overflow-hidden rounded-2xl relative aspect-3/4">
-                    <img src="./img/programs/Crossfit.webp"
-                        alt="Program CrossFit Active Life"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                    <div
-                        class="flex flex-col justify-endabsolute inset-0 bg-gradient-to-top from-black/90 via-black/50 to-black/10 items-start p-5">
-                        <h3 class="text-white text-xl font-bold uppercase tracking-wider">CrossFit</h3>
-                        <p>Antrenamente funcționale care testează forța, viteza și rezistența.</p>
+                <a class="block group overflow-hidden rounded-2xl relative aspect-3/4 cursor-pointer">
+                    <img src="./img/programs/Cardio.webp" alt="Program Cardio Active Life"
+                        class="w-full h-full brightness-70 object-cover transition-transform duration-500 group-hover:scale-110" />
+                    <div class="flex flex-col justify-end absolute inset-0 items-start p-5">
+                        <h3 class="text-white text-xl font-bold uppercase tracking-wider">Cardio</h3>
+                        <p class="hidden lg:block text-white text-[15px] font-medium tracking-wide mt-1">Arde caloriile
+                            cu sesiuni intense de HIT.</p>
                     </div>
                 </a>
+
+                <a class="block group overflow-hidden rounded-2xl relative aspect-3/4 cursor-pointer">
+                    <img src="./img/programs/Yoga.webp" alt="Program Yoga Active Life"
+                        class="w-full h-full brightness-70 object-cover transition-transform duration-500 group-hover:scale-110" />
+                    <div class="flex flex-col justify-end absolute inset-0 items-start p-5">
+                        <h3 class="text-white text-xl font-bold uppercase tracking-wider">Yoga</h3>
+                        <p class="hidden lg:block text-white text-[15px] font-medium tracking-wide mt-1">Îmbunătățește
+                            flexibilitatea, echilibrul și starea mentală.</p>
+                    </div>
+                </a>
+
+                <a class="block group overflow-hidden rounded-2xl relative aspect-3/4 cursor-pointer">
+                    <img src="./img/programs/Crossfit.webp" alt="Program CrossFit Active Life"
+                        class="w-full h-full brightness-70 object-cover transition-transform duration-500 group-hover:scale-110" />
+                    <div class="flex flex-col justify-end absolute inset-0 items-start p-5">
+                        <h3 class="text-white text-xl font-bold uppercase tracking-wider">CrossFit</h3>
+                        <p class="hidden lg:block text-white text-[15px] font-medium tracking-wide mt-1">Antrenamente
+                            funcționale care testează forța, viteza și rezistența.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="flex justify-center mt-12">
+                <a href="programs.html"
+                    class="inline-flex items-center justify-center bg-[#e53935] hover:bg-[#c62828] text-white font-bold uppercase tracking-widest px-10 py-4 sm:px-8 sm:py-4 text-sm sm:text-base transition duration-200 [clip-path:polygon(8%_0,100%_0,92%_100%,0%_100%)]">
+                    Începe Acum
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- De ce Active Life -->
+    <section class="py-20 bg-[#f8f9fa]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Antet -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold uppercase tracking-wide text-gray-800">
+                    DE CE <span class="text-[#E53935]">ACTIVE LIFE?</span>
+                </h2>
+                <div class="mx-auto mt-4 h-1 w-16 bg-[#E53935] rounded-full"></div>
+            </div>
+            <!-- Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div
+                    class="advantage-card bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all   duration-300">
+                    <div
+                        class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#E53935]/10 text-[#E53935] text-2xl mb-5">
+                        <i class="fa-solid fa-dumbbell"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Echipamente Premium</h3>
+                    <p class="text-gray-500 text-base leading-relaxed">Aparate de ultimă generație pentru rezultate
+                        optime.</p>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="advantage-card bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all   duration-300">
+                    <div
+                        class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#E53935]/10 text-[#E53935] text-2xl mb-5">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Antrenori Experți</h3>
+                    <p class="text-gray-500 text-base leading-relaxed">Profesioniști gata să te ghideze la fiecare
+                        pas.</p>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="advantage-card bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all   duration-300">
+                    <div
+                        class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#E53935]/10 text-[#E53935] text-2xl mb-5">
+                        <i class="fa-solid fa-heart-circle-bolt"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Atmosferă Motivantă</h3>
+                    <p class="text-gray-500 text-base leading-relaxed">Comunitate prietenoasă care te inspiră să fii
+                        mai bun.</p>
+                </div>
+                <!-- Card 4 -->
+                <div
+                    class="advantage-card bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all   duration-300">
+                    <div
+                        class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#E53935]/10 text-[#E53935] text-2xl mb-5">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Rezultate Garantate</h3>
+                    <p class="text-gray-500 text-base leading-relaxed">Programe personalizate pentru obiectivele tale.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformari -->
+    <section class="bg-[#212121] text-white py-20">
+        <div class="container mx-auto px-4">
+            <!-- Antet -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold uppercase tracking-wide text-white">
+                    Transformări<span class="text-[#E53935]"> Reale</span>
+                    <div class="mx-auto mt-4 h-1 w-16 bg-[#E53935] rounded-full"></div>
+                </h2>
+            </div>
+
+            <div class="text-center mb-12"> 
+                <p class="text-white mx-auto max-w-2xl text-lg">
+                    Rezultatele vorbesc de la sine. Vezi cum membrii noștri și-au
+                    schimbat viața cu ajutorul programelor noastre.
+                </p>
+            </div>
+
+            <div
+                class="before-after-slider fade-in relative aspect-video max-w-4xl mx-auto overflow-hidden select-none cursor-pointer rounded-lg shadow-xl">
+
+                <img class="ba-image w-full h-full object-cover pointer-events-none"
+                    src="https://images.unsplash.com/photo-1610312856669-2cee66b2949c?w=1080&q=80"
+                    alt="După transformare Active Life" />
+
+                <div
+                    class="ba-before absolute inset-0 w-1/2 overflow-hidden pointer-events-none border-r-2 border-white/20">
+                    <img class="absolute inset-0 w-full h-full object-cover max-w-none pointer-events-none"
+                        src="https://images.unsplash.com/photo-1613702973353-a854c7dc7a3b?w=1080&q=80"
+                        alt="Înainte transformare Active Life" />
+                </div>
+
+                <div
+                    class="ba-handle absolute top-0 bottom-0 left-1/2 -ml-4 w-8 flex items-center justify-center cursor-ew-resize z-30">
+                    <div class="w-1 h-full bg-white shadow-md"></div>
+                    <div
+                        class="absolute w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center border border-gray-200">
+                        <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 9l-4 4 4 4m8-8l4 4-4 4" />
+                        </svg>
+                    </div>
+                </div>
+
+                <span
+                    class="ba-label ba-label-before absolute bottom-4 left-4 bg-black/60 text-white text-xs font-semibold px-2 py-1 rounded uppercase tracking-wider z-20 pointer-events-none">
+                    Înainte
+                </span>
+                <span
+                    class="ba-label ba-label-after absolute bottom-4 right-4 bg-black/60 text-white text-xs font-semibold px-2 py-1 rounded uppercase tracking-wider z-20 pointer-events-none">
+                    După
+                </span>
 
             </div>
         </div>
     </section>
 
-        <!-- De ce Active Life -->
-        <section class="py-20 bg-[#f8f9fa]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Antet -->
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold uppercase tracking-wide text-gray-800">
-                        DE CE <span class="text-[#e94560]">ACTIVE LIFE?</span>
-                    </h2>
-                    <div class="mx-auto mt-4 h-1 w-16 bg-[#e94560] rounded-full"></div>
+    <!-- Counter -->
+    <section class="relative overflow-hidden bg-[#E53935] py-16 text-white">
+    <div class="absolute inset-0 opacity-10"
+        style="background-image: radial-gradient(circle at center, white 1px, transparent 1px); background-size: 20px 20px;">
+    </div>
+
+    <div class="container relative z-10 mx-auto px-4 lg:px-8">
+        <div class="grid grid-cols-2 gap-8 text-center md:grid-cols-4">
+
+            <div>
+                <div class="mb-2 font-['Bebas_Neue'] text-5xl tracking-wide md:text-6xl">
+                    <span class="counter-number" data-target="2500">0</span>+
                 </div>
-                <!-- Cards Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Card 1 -->
-                    <div
-                        class="advantage-card bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all   duration-300">
-                        <div
-                            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#e94560]/10 text-[#e94560] text-2xl mb-5">
-                            <i class="bi bi-gear-wide-connected"></i>
-                        </div>
-                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Echipamente Premium</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed">Aparate de ultimă generație pentru rezultate
-                            optime.</p>
-                    </div>
-                    <!-- Card 2 -->
-                    <div
-                        class="advantage-card bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all   duration-300">
-                        <div
-                            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#e94560]/10 text-[#e94560] text-2xl mb-5">
-                            <i class="bi bi-people"></i>
-                        </div>
-                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Antrenori Experți</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed">Profesioniști gata să te ghideze la fiecare
-                            pas.</p>
-                    </div>
-                    <!-- Card 3 -->
-                    <div
-                        class="advantage-card bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all   duration-300">
-                        <div
-                            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#e94560]/10 text-[#e94560] text-2xl mb-5">
-                            <i class="bi bi-heart-pulse"></i>
-                        </div>
-                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Atmosferă Motivantă</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed">Comunitate prietenoasă care te inspiră să fii
-                            mai bun.</p>
-                    </div>
-                    <!-- Card 4 -->
-                    <div
-                        class="advantage-card bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all   duration-300">
-                        <div
-                            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#e94560]/10 text-[#e94560] text-2xl mb-5">
-                            <i class="bi bi-trophy"></i>
-                        </div>
-                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Rezultate Garantate</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed">Programe personalizate pentru obiectivele tale.
-                        </p>
-                    </div>
+                <div class="text-sm font-bold uppercase tracking-widest md:text-base">
+                    Membri Activi
                 </div>
             </div>
-        </section>
-        <script src="./js/main.js"></script>
+
+            <div>
+                <div class="mb-2 font-['Bebas_Neue'] text-5xl tracking-wide md:text-6xl">
+                    <span class="counter-number" data-target="15">0</span>+
+                </div>
+                <div class="text-sm font-bold uppercase tracking-widest md:text-base">
+                    Antrenori Experți
+                </div>
+            </div>
+
+            <div>
+                <div class="mb-2 font-['Bebas_Neue'] text-5xl tracking-wide md:text-6xl">
+                    <span class="counter-number" data-target="8">0</span>
+                </div>
+                <div class="text-sm font-bold uppercase tracking-widest md:text-base">
+                    Ani de Experiență
+                </div>
+            </div>
+
+            <div>
+                <div class="mb-2 font-['Bebas_Neue'] text-5xl tracking-wide md:text-6xl">
+                    <span class="counter-number" data-target="120">0</span>+
+                </div>
+                <div class="text-sm font-bold uppercase tracking-widest md:text-base">
+                    Clase / Săptămână
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
