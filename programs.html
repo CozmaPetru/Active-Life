@@ -57,28 +57,320 @@
         </div>
     </nav>
     <!-- Programe de antrenament -->
-    <section class=" py-12 md:py-20 bg-[#f8f9fa] flex grow">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <main class="page-shell bg-gray-50 py-12 text-gray-800 antialiased">
+        <div class="container mx-auto px-4 max-w-7xl">
 
-            <div class="text-center max-w-2xl mx-auto mb-12">
-                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold uppercase tracking-wide text-[#212121]">
-                    Programe de <span class="text-[#E53935]">antrenament</span>
-                </h2>
-                <div class="mx-auto mt-3 mb-4 h-1 w-20 md:w-32 bg-[#E53935] rounded-full"></div>
-                <p class="text-[#212121]/90 text-base md:text-lg font-medium leading-relaxed px-2">
+            <header class="page-header-modern text-center mb-10">
+                <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-gray-900">
+                    PROGRAME DE <span class="text-red-600">ANTRENAMENT</span>
+                </h1>
+                <div class="section-divider mx-auto my-4 h-1 w-16 bg-red-600 rounded"></div>
+                <p class="max-w-2xl mx-auto text-base text-gray-600 sm:text-lg">
                     Alege din gama noastră variată de programe concepute pentru a te ajuta să-ți atingi obiectivele,
                     indiferent de nivelul tău de fitness.
                 </p>
+            </header>
+
+            <nav class="filter-pills flex flex-wrap justify-center gap-2 mb-10" aria-label="Program filters">
+                <button
+                    class="filter-pill program-filter-btn active px-4 py-2 text-sm font-medium rounded-full bg-red-600 text-white shadow-sm transition hover:bg-red-700"
+                    data-filter="all">Toate</button>
+                <button
+                    class="filter-pill program-filter-btn px-4 py-2 text-sm font-medium rounded-full bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 shadow-sm transition"
+                    data-filter="cardio">Cardio</button>
+                <button
+                    class="filter-pill program-filter-btn px-4 py-2 text-sm font-medium rounded-full bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 shadow-sm transition"
+                    data-filter="forta">Forță</button>
+                <button
+                    class="filter-pill program-filter-btn px-4 py-2 text-sm font-medium rounded-full bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 shadow-sm transition"
+                    data-filter="flexibilitate">Flexibilitate</button>
+                <button
+                    class="filter-pill program-filter-btn px-4 py-2 text-sm font-medium rounded-full bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 shadow-sm transition"
+                    data-filter="grup">Grup</button>
+            </nav>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+
+                <article class="program-card-item fade-in group" data-type="forta">
+                    <div
+                        class="program-card-modern h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <div class="card-image relative aspect-4/3 overflow-hidden bg-gray-200">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=600&q=80"
+                                alt="Power Lifting">
+                            <span
+                                class="type-badge absolute top-3 left-3 bg-red-600 text-white text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">forță</span>
+                        </div>
+                        <div class="card-body-modern p-5 flex flex-col grow">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Power Lifting</h3>
+                            <p class="card-desc text-sm text-gray-600 grow mb-4">Construiește masă musculară și
+                                forță brută cu exerciții compuse.</p>
+                            <div
+                                class="card-meta flex items-center justify-between text-xs font-semibold text-gray-500 pt-3 border-t border-gray-100">
+                                <span class="flex items-center gap-1"><i
+                                        class="bi bi-bar-chart text-red-500"></i>Avansat</span>
+                                <span class="flex items-center gap-1"><i class="bi bi-clock text-red-500"></i>60
+                                    min</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="program-card-item fade-in group" data-type="cardio">
+                    <div
+                        class="program-card-modern h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <div class="card-image relative aspect-4/3 overflow-hidden bg-gray-200">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=600&q=80"
+                                alt="HIIT Blast">
+                            <span
+                                class="type-badge absolute top-3 left-3 bg-red-600 text-white text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">cardio</span>
+                        </div>
+                        <div class="card-body-modern p-5 flex flex-col grow">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">HIIT Blast</h3>
+                            <p class="card-desc text-sm text-gray-600 grow mb-4">Antrenament pe intervale de mare
+                                intensitate pentru arderea grăsimilor.</p>
+                            <div
+                                class="card-meta flex items-center justify-between text-xs font-semibold text-gray-500 pt-3 border-t border-gray-100">
+                                <span class="flex items-center gap-1"><i
+                                        class="bi bi-bar-chart text-red-500"></i>Intermediar</span>
+                                <span class="flex items-center gap-1"><i class="bi bi-clock text-red-500"></i>45
+                                    min</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="program-card-item fade-in group" data-type="flexibilitate">
+                    <div
+                        class="program-card-modern h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <div class="card-image relative aspect-4/3 overflow-hidden bg-gray-200">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                src="https://images.unsplash.com/photo-1554244933-d876deb6b2ff?w=600&q=80"
+                                alt="Vinyasa Yoga">
+                            <span
+                                class="type-badge absolute top-3 left-3 bg-red-600 text-white text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">flexibilitate</span>
+                        </div>
+                        <div class="card-body-modern p-5 flex flex-col grow">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Vinyasa Yoga</h3>
+                            <p class="card-desc text-sm text-gray-600 grow mb-4">Flux continuu de posturi pentru
+                                flexibilitate și echilibru mental.</p>
+                            <div
+                                class="card-meta flex items-center justify-between text-xs font-semibold text-gray-500 pt-3 border-t border-gray-100">
+                                <span class="flex items-center gap-1"><i
+                                        class="bi bi-bar-chart text-red-500"></i>Începător</span>
+                                <span class="flex items-center gap-1"><i class="bi bi-clock text-red-500"></i>60
+                                    min</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="program-card-item fade-in group" data-type="forta">
+                    <div
+                        class="program-card-modern h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <div class="card-image relative aspect-4/3 overflow-hidden bg-gray-200">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=600&q=80"
+                                alt="CrossFit Elite">
+                            <span
+                                class="type-badge absolute top-3 left-3 bg-red-600 text-white text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">forță</span>
+                        </div>
+                        <div class="card-body-modern p-5 flex flex-col grow">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">CrossFit Elite</h3>
+                            <p class="card-desc text-sm text-gray-600 grow mb-4">Mișcări funcționale executate la
+                                intensitate ridicată.</p>
+                            <div
+                                class="card-meta flex items-center justify-between text-xs font-semibold text-gray-500 pt-3 border-t border-gray-100">
+                                <span class="flex items-center gap-1"><i
+                                        class="bi bi-bar-chart text-red-500"></i>Avansat</span>
+                                <span class="flex items-center gap-1"><i class="bi bi-clock text-red-500"></i>50
+                                    min</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="program-card-item fade-in group" data-type="cardio">
+                    <div
+                        class="program-card-modern h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <div class="card-image relative aspect-4/3 overflow-hidden bg-gray-200">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                src="https://images.unsplash.com/photo-1637430308606-86576d8fef3c?w=600&q=80"
+                                alt="Spinning">
+                            <span
+                                class="type-badge absolute top-3 left-3 bg-red-600 text-white text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">cardio</span>
+                        </div>
+                        <div class="card-body-modern p-5 flex flex-col grow">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Spinning</h3>
+                            <p class="card-desc text-sm text-gray-600 grow mb-4">Ciclism indoor intens pe muzică
+                                antrenantă.</p>
+                            <div
+                                class="card-meta flex items-center justify-between text-xs font-semibold text-gray-500 pt-3 border-t border-gray-100">
+                                <span class="flex items-center gap-1"><i
+                                        class="bi bi-bar-chart text-red-500"></i>Intermediar</span>
+                                <span class="flex items-center gap-1"><i class="bi bi-clock text-red-500"></i>45
+                                    min</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="program-card-item fade-in group" data-type="flexibilitate">
+                    <div
+                        class="program-card-modern h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <div class="card-image relative aspect-4/3 overflow-hidden bg-gray-200">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                src="https://images.unsplash.com/photo-1554244933-d876deb6b2ff?w=600&q=80"
+                                alt="Pilates Core">
+                            <span
+                                class="type-badge absolute top-3 left-3 bg-red-600 text-white text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">flexibilitate</span>
+                        </div>
+                        <div class="card-body-modern p-5 flex flex-col grow">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Pilates Core</h3>
+                            <p class="card-desc text-sm text-gray-600 grow mb-4">Întărirea musculaturii profunde și
+                                îmbunătățirea posturii.</p>
+                            <div
+                                class="card-meta flex items-center justify-between text-xs font-semibold text-gray-500 pt-3 border-t border-gray-100">
+                                <span class="flex items-center gap-1"><i
+                                        class="bi bi-bar-chart text-red-500"></i>Începător</span>
+                                <span class="flex items-center gap-1"><i class="bi bi-clock text-red-500"></i>50
+                                    min</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="program-card-item fade-in group" data-type="grup">
+                    <div
+                        class="program-card-modern h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <div class="card-image relative aspect-4/3 overflow-hidden bg-gray-200">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=600&q=80"
+                                alt="Zumba Dance">
+                            <span
+                                class="type-badge absolute top-3 left-3 bg-red-600 text-white text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">grup</span>
+                        </div>
+                        <div class="card-body-modern p-5 flex flex-col grow">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Zumba Dance</h3>
+                            <p class="card-desc text-sm text-gray-600 grow mb-4">Program de fitness bazat pe
+                                mișcări de dans latino.</p>
+                            <div
+                                class="card-meta flex items-center justify-between text-xs font-semibold text-gray-500 pt-3 border-t border-gray-100">
+                                <span class="flex items-center gap-1"><i
+                                        class="bi bi-bar-chart text-red-500"></i>Începător</span>
+                                <span class="flex items-center gap-1"><i class="bi bi-clock text-red-500"></i>60
+                                    min</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="program-card-item fade-in group" data-type="grup">
+                    <div
+                        class="program-card-modern h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <div class="card-image relative aspect-4/3 overflow-hidden bg-gray-200">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=600&q=80"
+                                alt="Body Pump">
+                            <span
+                                class="type-badge absolute top-3 left-3 bg-red-600 text-white text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">grup</span>
+                        </div>
+                        <div class="card-body-modern p-5 flex flex-col grow">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Body Pump</h3>
+                            <p class="card-desc text-sm text-gray-600 grow mb-4">Antrenament cu haltere pentru
+                                tonifierea întregului corp.</p>
+                            <div
+                                class="card-meta flex items-center justify-between text-xs font-semibold text-gray-500 pt-3 border-t border-gray-100">
+                                <span class="flex items-center gap-1"><i
+                                        class="bi bi-bar-chart text-red-500"></i>Intermediar</span>
+                                <span class="flex items-center gap-1"><i class="bi bi-clock text-red-500"></i>60
+                                    min</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
             </div>
-            <div class="flex flex-row flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 mb-12">
-                    <button type="button" class="sm:w-auto inline-flex items-center justify-center bg-white hover:bg-neutral-200  border border-neutral-300 shadow-md text-[#212121] font-bold uppercase tracking-widest px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base transition rounded-full">Toate</button>
-                    <button type="button" class="sm:w-auto inline-flex items-center justify-center bg-white hover:bg-neutral-200  border border-neutral-300 shadow-md text-[#212121] font-bold uppercase tracking-widest px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base transition rounded-full">Cardio</button> 
-                    <button type="button" class="sm:w-auto inline-flex items-center justify-center bg-white hover:bg-neutral-200  border border-neutral-300 shadow-md text-[#212121] font-bold uppercase tracking-widest px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base transition rounded-full">Forță</button>
-                    <button type="button" class="sm:w-auto inline-flex items-center justify-center bg-white hover:bg-neutral-200 border border-neutral-300 shadow-md text-[#212121] font-bold uppercase tracking-widest px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base transition rounded-full">Flexibilitate</button>
-                    <button type="button" class="sm:w-auto inline-flex items-center justify-center bg-white hover:bg-neutral-200 border border-neutral-300 shadow-md text-[#212121] font-bold uppercase tracking-widest px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base transition rounded-full">Grup</button>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="section-title-modern text-2xl font-bold text-gray-900 tracking-tight">
+                        INFORMAȚII <span class="text-red-600">UTILE</span>
+                    </h2>
+                </div>
+
+                <div class="accordion accordion-modern space-y-3" id="programsAccordion">
+
+                    <div class="accordion-item border border-gray-200 bg-white rounded-xl overflow-hidden shadow-sm">
+                        <h3 class="accordion-header">
+                            <button
+                                class="accordion-button w-full flex justify-between items-center px-5 py-4 text-left font-semibold text-gray-900 bg-gray-50 hover:bg-gray-100 transition"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#acc1">
+                                Echipament Necesar
+                            </button>
+                        </h3>
+                        <div id="acc1" class="accordion-collapse collapse show" data-bs-parent="#programsAccordion">
+                            <div class="accordion-body px-5 py-4 text-sm text-gray-600 border-t border-gray-200">
+                                Pentru majoritatea claselor aveți nevoie doar de haine sportive confortabile, adidași de
+                                interior, un prosop și o sticlă de apă. Echipamentul specific este pus la dispoziție de
+                                noi.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border border-gray-200 bg-white rounded-xl overflow-hidden shadow-sm">
+                        <h3 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed w-full flex justify-between items-center px-5 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#acc2">
+                                Cum să mă pregătesc pentru prima clasă?
+                            </button>
+                        </h3>
+                        <div id="acc2" class="accordion-collapse collapse" data-bs-parent="#programsAccordion">
+                            <div class="accordion-body px-5 py-4 text-sm text-gray-600 border-t border-gray-200">
+                                Veniți cu 10-15 minute înainte pentru a vă familiariza cu sala și pentru a discuta cu
+                                instructorul despre eventuale probleme de sănătate.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border border-gray-200 bg-white rounded-xl overflow-hidden shadow-sm">
+                        <h3 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed w-full flex justify-between items-center px-5 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#acc3">
+                                Pot participa dacă sunt începător?
+                            </button>
+                        </h3>
+                        <div id="acc3" class="accordion-collapse collapse" data-bs-parent="#programsAccordion">
+                            <div class="accordion-body px-5 py-4 text-sm text-gray-600 border-t border-gray-200">
+                                Absolut! Avem clase pentru începători, iar la clasele mixte instructorii oferă
+                                alternative pentru fiecare nivel de fitness.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border border-gray-200 bg-white rounded-xl overflow-hidden shadow-sm">
+                        <h3 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed w-full flex justify-between items-center px-5 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#acc4">
+                                Regulamentul claselor de grup
+                            </button>
+                        </h3>
+                        <div id="acc4" class="accordion-collapse collapse" data-bs-parent="#programsAccordion">
+                            <div class="accordion-body px-5 py-4 text-sm text-gray-600 border-t border-gray-200">
+                                Respectați ora de începere. Accesul după încălzire nu este permis din motive de
+                                siguranță. Ștergeți echipamentul după utilizare.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+
         </div>
-    </section>
+    </main>
 
     <footer class="bg-[#212121] text-neutral-400 py-12 border-t border-neutral-800">
         <div class="container mx-auto px-4 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -90,7 +382,6 @@
                 <p class="text-sm">Transformă-ți corpul, depășește-ți limitele și trăiește o viață activă și sănătoasă.
                 </p>
             </div>
-
             <div>
                 <h4 class="text-white font-['Bebas_Neue'] text-xl mb-4 tracking-wide">Linkuri Rapide</h4>
                 <ul class="flex flex-col gap-2 text-sm">
@@ -100,7 +391,6 @@
                     <li><a href="/memberships" class="hover:text-[#E53935] transition-colors">Abonamente</a></li>
                 </ul>
             </div>
-
             <div>
                 <h4 class="text-white font-['Bebas_Neue'] text-xl mb-4 tracking-wide">Contact</h4>
                 <ul class="flex flex-col gap-2 text-sm">
@@ -109,7 +399,6 @@
                     <li><i class="fa-solid fa-envelope mr-2"></i>contact@activelife.md</li>
                 </ul>
             </div>
-
             <div>
                 <h4 class="text-white font-['Bebas_Neue'] text-xl mb-4 tracking-wide">Urmărește-ne</h4>
                 <div class="flex gap-4">
@@ -128,6 +417,7 @@
         </div>
     </footer>
     <script src="./js/main.js"></script>
+    <script src="./js/programs.js"></script>
 </body>
 
 </html>
