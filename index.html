@@ -19,45 +19,62 @@
         <div class="w-full px-4 sm:px-6 lg:px-12">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
-                <a href="index.html" class="font-bold text-xl uppercase tracking-wide">
-                    <span class="text-white">ACTIVE</span>
-                    <span class="text-[#e53935]">LIFE</span>
+                <a href="./index.html" class="flex items-center gap-2">
+                    <img src="./img/gallery/Logo(black).png" alt="Active Life Logo" class="h-10 w-auto">
+                    <div class="font-bold text-xl uppercase tracking-wide leading-none">
+                        <span class="text-white">ACTIVE</span>
+                        <span class="text-[#e53935]">LIFE</span>
+                    </div>
                 </a>
 
-                <!-- Buton burger -->
-                <button id="menu-btn" class="p-2 text-white md:hidden" aria-label="Toggle menu">
+                <!-- Desktop Navigation -->
+                <ul class="hidden md:flex items-center gap-2">
+                    <li>
+                        <a href="./index.html" class="block px-3 py-2 rounded font-bold text-[#e53935]">Acasă
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./programs.html" class="block px-3 py-2 rounded font-bold text-white hover:bg-white/10 transition">Programe</a>
+                    </li>
+                    <li>
+                        <a href="./trainers.html" class="block px-3 py-2 rounded font-bold text-white hover:bg-white/10 transition">Antrenori</a>
+                    </li>
+                    <li>
+                        <a href="./schedule.html" class="block px-3 py-2 rounded font-bold text-white hover:bg-white/10 transition">Orar</a>
+                    </li>
+                    <li>
+                        <a href="./memberships.html" class="block px-3 py-2 rounded font-bold text-white hover:bg-white/10 transition">Abonamente</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html" class="block px-3 py-2 rounded font-bold text-white hover:bg-white/10 transition">Contact</a>
+                    </li>
+                </ul>
+                <!-- Mobile Button -->
+                <button id="menu-btn" class="md:hidden p-2 text-white hover:bg-white/10 rounded transition"
+                    aria-label="Deschide meniul">
                     ☰
                 </button>
-
-                <!-- navbar Desktop -->
-                <ul class="hidden md:flex items-center gap-2">
-                    <li><a href="./index.html" class="block px-3 py-2 font-bold text-[#e53935]">Acasă</a></li>
-                    <li><a href="./programs.html"
-                            class="block px-3 py-2 font-bold text-white hover:bg-white/10 rounded">Programe</a></li>
-                    <li><a href="./trainers.html"
-                            class="block px-3 py-2 font-bold text-white hover:bg-white/10 rounded">Antrenori</a></li>
-                    <li><a href="./schedule.html"
-                            class="block px-3 py-2 font-bold text-white hover:bg-white/10 rounded">Orar</a></li>
-                    <li><a href="./subscriptions.html"
-                            class="block px-3 py-2 font-bold text-white hover:bg-white/10 rounded">Abonamente</a></li>
-                    <li><a href="./contact.html"
-                            class="block px-3 py-2 font-bold text-white hover:bg-white/10 rounded">Contact</a></li>
-                </ul>
             </div>
 
-            <!-- navbar Mobil -->
-            <ul id="mobile-menu"
-                class="flex flex-col md:hidden overflow-hidden max-h-0 transition-[max-height] duration-300 ease-in-out">
-                <li><a href="./index.html" class="block px-3 py-3 text-[#e53935] font-bold">Acasă</a></li>
-                <li><a href="./programs.html"
-                        class="block px-3 py-3 text-white font-bold hover:bg-white/10">Programe</a></li>
-                <li><a href="./trainers.html"
-                        class="block px-3 py-3 text-white font-bold hover:bg-white/10">Antrenori</a></li>
-                <li><a href="./schedule.html" class="block px-3 py-3 text-white font-bold hover:bg-white/10">Orar</a>
+            <!-- Mobile Navigation -->
+            <ul id="mobile-menu" class="md:hidden flex flex-col overflow-hidden max-h-0 transition-[max-height] duration-300 ease-in-out">
+                <li>
+                    <a href="./index.html" class="block px-3 py-3 font-bold text-[#e53935] hover:bg-white/10">Acasă</a>
                 </li>
-                <li><a href="./subscriptions.html"
-                        class="block px-3 py-3 text-white font-bold hover:bg-white/10">Abonamente</a></li>
-                <li><a href="./contact.html" class="block px-3 py-3 text-white font-bold hover:bg-white/10">Contact</a>
+                <li>
+                    <a href="./programs.html" class="block px-3 py-3 font-bold text-white hover:bg-white/10">Programe</a>
+                </li>
+                <li>
+                    <a href="./trainers.html" class="block px-3 py-3 font-bold text-white hover:bg-white/10">Antrenori</a>
+                </li>
+                <li>
+                    <a href="./schedule.html" class="block px-3 py-3 font-bold text-white hover:bg-white/10">Orar</a>
+                </li>
+                <li>
+                    <a href="./memberships.html" class="block px-3 py-3 font-bold text-white hover:bg-white/10">Abonamente</a>
+                </li>
+                <li>
+                    <a href="./contact.html" class="block px-3 py-3 font-bold text-white hover:bg-white/10">Contact</a>
                 </li>
             </ul>
         </div>
@@ -84,7 +101,8 @@
                     programe de top, antrenori de elită și o comunitate care te susține.</span>
             </p>
             <div>
-                <a href="programs.html" class="inline-flex items-center justify-center bg-[#e53935] hover:bg-[#c62828] text-white font-bold uppercase tracking-widest px-10 py-4 sm:px-8 sm:py-4 text-sm sm:text-base transition rounded-lg">
+                <a href="./programs.html"
+                    class="inline-flex items-center justify-center bg-[#e53935] hover:bg-[#c62828] text-white font-bold uppercase tracking-widest px-10 py-4 sm:px-8 sm:py-4 text-sm sm:text-base transition rounded-lg">
                     Începe Acum
                 </a>
             </div>
@@ -107,7 +125,8 @@
                         class="w-full h-full brightness-70 object-cover transition-transform duration-500 group-hover:scale-110" />
                     <div class="flex flex-col justify-end absolute inset-0 items-start p-5">
                         <h3 class="text-white text-xl font-bold uppercase tracking-wider">Forță</h3>
-                        <p class="hidden lg:block text-white text-[15px] font-medium tracking-wide mt-1">Construiește masă musculară cu programe de forță periodizate.</p>
+                        <p class="hidden lg:block text-white text-[15px] font-medium tracking-wide mt-1">Construiește
+                            masă musculară cu programe de forță periodizate.</p>
                     </div>
                 </a>
 
@@ -116,7 +135,8 @@
                         class="w-full h-full brightness-70 object-cover transition-transform duration-500 group-hover:scale-110" />
                     <div class="flex flex-col justify-end absolute inset-0 items-start p-5">
                         <h3 class="text-white text-xl font-bold uppercase tracking-wider">Cardio</h3>
-                        <p class="hidden lg:block text-white text-[15px] font-medium tracking-wide mt-1">Arde caloriile cu sesiuni intense de HIT.</p>
+                        <p class="hidden lg:block text-white text-[15px] font-medium tracking-wide mt-1">Arde caloriile
+                            cu sesiuni intense de HIT.</p>
                     </div>
                 </a>
 
@@ -125,7 +145,8 @@
                         class="w-full h-full brightness-70 object-cover transition-transform duration-500 group-hover:scale-110" />
                     <div class="flex flex-col justify-end absolute inset-0 items-start p-5">
                         <h3 class="text-white text-xl font-bold uppercase tracking-wider">Yoga</h3>
-                        <p class="hidden lg:block text-white text-[15px] font-medium tracking-wide mt-1">Îmbunătățește flexibilitatea, echilibrul și starea mentală.</p>
+                        <p class="hidden lg:block text-white text-[15px] font-medium tracking-wide mt-1">Îmbunătățește
+                            flexibilitatea, echilibrul și starea mentală.</p>
                     </div>
                 </a>
 
@@ -134,13 +155,14 @@
                         class="w-full h-full brightness-70 object-cover transition-transform duration-500 group-hover:scale-110" />
                     <div class="flex flex-col justify-end absolute inset-0 items-start p-5">
                         <h3 class="text-white text-xl font-bold uppercase tracking-wider">CrossFit</h3>
-                        <p class="hidden lg:block text-white text-[15px] font-medium tracking-wide mt-1">Antrenamente funcționale care testează forța, viteza și rezistența.</p>
+                        <p class="hidden lg:block text-white text-[15px] font-medium tracking-wide mt-1">Antrenamente
+                            funcționale care testează forța, viteza și rezistența.</p>
                     </div>
                 </a>
             </div>
 
             <div class="flex justify-center mt-12">
-                <a href="programs.html"
+                <a href="./programs.html"
                     class="inline-flex items-center justify-center bg-[#e53935] hover:bg-[#c62828] text-white font-bold uppercase tracking-widest px-10 py-4 sm:px-8 sm:py-4 text-sm sm:text-base transition rounded-lg">
                     Începe Acum
                 </a>
@@ -230,13 +252,13 @@
                 class="before-after-slider fade-in relative aspect-video max-w-4xl mx-auto overflow-hidden select-none cursor-pointer rounded-lg shadow-xl">
 
                 <img class="ba-image w-full h-full object-cover pointer-events-none"
-                    src="https://images.unsplash.com/photo-1610312856669-2cee66b2949c?w=1080&q=80"
+                    src="./img/transformations/girl_after.webp"
                     alt="După transformare Active Life" />
 
                 <div
                     class="ba-before absolute inset-0 w-1/2 overflow-hidden pointer-events-none border-r-2 border-white/20">
                     <img class="absolute inset-0 w-full h-full object-cover max-w-none pointer-events-none"
-                        src="https://images.unsplash.com/photo-1613702973353-a854c7dc7a3b?w=1080&q=80"
+                        src="./img/transformations/girl_before.webp"
                         alt="Înainte transformare Active Life" />
                 </div>
 
@@ -275,7 +297,7 @@
             <div class="grid grid-cols-2 gap-8 text-center md:grid-cols-4">
                 <div>
                     <div class="mb-2 font-['Bebas_Neue'] text-5xl tracking-wide md:text-6xl">
-                        <span class="counter-number" data-target="2500">0</span>+
+                        <span class="counter-number" data-target="500">0</span>+
                     </div>
                     <div class="text-sm font-bold uppercase tracking-widest md:text-base">
                         Membri Activi
@@ -283,7 +305,7 @@
                 </div>
                 <div>
                     <div class="mb-2 font-['Bebas_Neue'] text-5xl tracking-wide md:text-6xl">
-                        <span class="counter-number" data-target="15">0</span>+
+                        <span class="counter-number" data-target="6">0</span>+
                     </div>
                     <div class="text-sm font-bold uppercase tracking-widest md:text-base">
                         Antrenori Experți
@@ -291,7 +313,7 @@
                 </div>
                 <div>
                     <div class="mb-2 font-['Bebas_Neue'] text-5xl tracking-wide md:text-6xl">
-                        <span class="counter-number" data-target="8">0</span>
+                        <span class="counter-number" data-target="3">0</span>
                     </div>
                     <div class="text-sm font-bold uppercase tracking-widest md:text-base">
                         Ani de Experiență
@@ -299,7 +321,7 @@
                 </div>
                 <div>
                     <div class="mb-2 font-['Bebas_Neue'] text-5xl tracking-wide md:text-6xl">
-                        <span class="counter-number" data-target="120">0</span>+
+                        <span class="counter-number" data-target="">0</span>+
                     </div>
                     <div class="text-sm font-bold uppercase tracking-widest md:text-base">
                         Clase / Săptămână
@@ -313,7 +335,7 @@
     <footer class="bg-[#212121] text-neutral-400 py-12 border-t border-neutral-800">
         <div class="container mx-auto px-4 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-                <a href="index.html" class="font-bold text-xl uppercase tracking-wide">
+                <a href="./index.html" class="font-bold text-xl uppercase tracking-wide">
                     <span class="text-white">ACTIVE</span>
                     <span class="text-[#e53935]">LIFE</span>
                 </a>
@@ -324,10 +346,10 @@
             <div>
                 <h4 class="text-white font-['Bebas_Neue'] text-xl mb-4 tracking-wider">Linkuri Rapide</h4>
                 <ul class="flex flex-col gap-2 text-sm">
-                    <li><a href="/programs" class="hover:text-[#E53935] transition-colors">Programe</a></li>
-                    <li><a href="/trainers" class="hover:text-[#E53935] transition-colors">Antrenori</a></li>
-                    <li><a href="/schedule" class="hover:text-[#E53935] transition-colors">Orar</a></li>
-                    <li><a href="/memberships" class="hover:text-[#E53935] transition-colors">Abonamente</a></li>
+                    <li><a href="./programs.html" class="hover:text-[#E53935] transition-colors">Programe</a></li>
+                    <li><a href="./trainers.html" class="hover:text-[#E53935] transition-colors">Antrenori</a></li>
+                    <li><a href="./schedule.html" class="hover:text-[#E53935] transition-colors">Orar</a></li>
+                    <li><a href="./memberships.html" class="hover:text-[#E53935] transition-colors">Abonamente</a></li>
                 </ul>
             </div>
 
