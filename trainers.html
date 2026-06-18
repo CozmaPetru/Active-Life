@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antrenori</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="./src/output.css" rel="stylesheet">
+</head>
+
+<body class="">
+    <!-- Antet -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#212121] border-b border-white/10">
+        <div class="w-full px-4 sm:px-6 lg:px-12">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2">
+                    <img src="./img/gallery/Logo(black).png" alt="Active Life Logo" class="h-10 w-auto">
+                    <div class="font-bold text-xl uppercase tracking-wide leading-none">
+                        <span class="text-white">ACTIVE</span>
+                        <span class="text-[#e53935]">LIFE</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <ul class="hidden md:flex items-center gap-2">
+                    <li>
+                        <a href="./index.html" class="block px-3 py-2 rounded font-bold text-white hover:bg-white/10 transition">Acasă</a>
+                    </li>
+                    <li>
+                        <a href="./programs.html" class="block px-3 py-2 rounded font-bold text-white hover:bg-white/10 transition">Programe</a>
+                    </li>
+                    <li>
+                        <a href="./trainers.html" class="block px-3 py-2 rounded font-bold text-[#e53935]">Antrenori</a>
+                    </li>
+                    <li>
+                        <a href="./schedule.html" class="block px-3 py-2 rounded font-bold text-white hover:bg-white/10 transition">Orar</a>
+                    </li>
+                    <li>
+                        <a href="./memberships.html" class="block px-3 py-2 rounded font-bold text-white hover:bg-white/10 transition">Abonamente</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html" class="block px-3 py-2 rounded font-bold text-white hover:bg-white/10 transition">Contact</a>
+                    </li>
+                </ul>
+                <!-- Mobile Button -->
+                <button id="menu-btn" class="md:hidden p-2 text-white hover:bg-white/10 rounded transition"
+                    aria-label="Deschide meniul">
+                    ☰
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <ul id="mobile-menu" class="md:hidden flex flex-col overflow-hidden max-h-0 transition-[max-height] duration-300 ease-in-out">
+                <li>
+                    <a href="./index.html" class="block px-3 py-3 font-bold text-white hover:bg-white/10">Acasă</a>
+                </li>
+                <li>
+                    <a href="./programs.html" class="block px-3 py-3 font-bold text-white hover:bg-white/10">Programe</a>
+                </li>
+                <li>
+                    <a href="./trainers.html" class="block px-3 py-3 font-bold text-[#e53935] hover:bg-white/10">Antrenori</a>
+                </li>
+                <li>
+                    <a href="./schedule.html" class="block px-3 py-3 font-bold text-white hover:bg-white/10">Orar</a>
+                </li>
+                <li>
+                    <a href="./memberships.html" class="block px-3 py-3 font-bold text-white hover:bg-white/10">Abonamente</a>
+                </li>
+                <li>
+                    <a href="./contact.html" class="block px-3 py-3 font-bold text-white hover:bg-white/10">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Antrenori -->
+    <section class="bg-gray-50 pt-28 pb-12 px-4 sm:px-6 lg:px-8 min-h-screen">
+        <div class="max-w-7xl mx-auto">
+
+            <div class="text-center mb-12">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight uppercase">
+                    Echipa de <span class="text-red-600">Antrenori</span>
+                </h1>
+                <div class="w-24 h-1 bg-red-600 mx-auto mt-4 mb-4"></div>
+                <p class="max-w-2xl mx-auto text-base text-gray-600">
+                    Experții noștri sunt dedicați succesului tău. Cu ani de experiență și certificări recunoscute
+                    internațional, ei te vor ghida pas cu pas.
+                </p>
+            </div>
+
+            <div class="flex sm:flex-row flex-wrap justify-center items-center gap-3 mb-10">
+                <button
+                    class="trainer-filter-btn px-5 py-2 lg:px-7 lg:py-3 text-md font-bold rounded-full bg-red-600 text-white shadow-sm transition"
+                    data-filter="all">Toți</button>
+                <button
+                    class="trainer-filter-btn px-5 py-2 lg:px-7 lg:py-3 text-md font-bold rounded-full bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 shadow-sm transition"
+                    data-filter="forta">Forță</button>
+                <button
+                    class="trainer-filter-btn px-5 py-2 lg:px-7 lg:py-3 text-md font-bold rounded-full bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 shadow-sm transition"
+                    data-filter="yoga">Yoga</button>
+                <button
+                    class="trainer-filter-btn px-5 py-2 lg:px-7 lg:py-3 text-md font-bold rounded-full bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 shadow-sm transition"
+                    data-filter="cardio">Cardio</button>
+                <button
+                    class="trainer-filter-btn px-5 py-2 lg:px-7 lg:py-3 text-md font-bold rounded-full bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 shadow-sm transition"
+                    data-filter="crossfit">CrossFit</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- CARD 1: Maxim Popa -->
+                <div class="trainer-card-item" data-specialty="forta">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+
+                        <div class="relative overflow-hidden aspect-4/3 sm:aspect-video md:aspect-4/3">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                src="./img/trainers/power_trainer.webp"
+                                alt="Antrenor Maxim Popa">
+
+                            <!-- Desktop Overlay (Vizibil doar de la md:) -->
+                            <div class="hidden md:flex opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/50 transition-opacity duration-300 items-center justify-center gap-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-white text-gray-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors duration-200" aria-label="Facebook">
+                                    <i class="fa-brands fa-facebook text-lg"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-white text-gray-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors duration-200" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram text-lg"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-white text-gray-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors duration-200" aria-label="Twitter">
+                                    <i class="fa-brands fa-x-twitter text-md"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="flex items-start justify-between gap-2 mb-3">
+                                <div>
+                                    <span class="inline-block text-xs font-bold uppercase tracking-wider text-red-600 mb-0.5">Forță</span>
+                                    <h3 class="text-xl font-bold text-gray-900">Maxim Popa</h3>
+                                </div>
+
+                                <!-- Mobile Social Icons (Ascunse de la md:) -->
+                                <div class="flex items-center gap-3 md:hidden pt-4">
+                                    <a href="#" class="text-gray-500 hover:text-red-600 transition-colors" aria-label="Facebook">
+                                        <i class="fa-brands fa-facebook text-xl"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-500 hover:text-red-600 transition-colors" aria-label="Instagram">
+                                        <i class="fa-brands fa-instagram text-xl"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-500 hover:text-red-600 transition-colors" aria-label="Twitter">
+                                        <i class="fa-brands fa-x-twitter text-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2 text-sm text-gray-600 mb-4">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-award text-red-500"></i><span>ABC Fitness Moldova</span></div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-award text-red-500"></i><span>CrossFit Level 2</span></div>
+                            </div>
+                            <div class="pt-3 border-t border-gray-100 flex items-start gap-2 text-sm font-medium text-amber-600">
+                                <i class="fa-solid fa-trophy text-base mt-0.5 shrink-0"></i>
+                                <span>Campion Național la Powerlifting  în 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2: Ilinca Bucur -->
+                <div class="trainer-card-item" data-specialty="yoga">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        
+                        <div class="relative overflow-hidden aspect-4/3 sm:aspect-video md:aspect-4/3">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                src="./img/trainers/yoga_trainer.webp"
+                                alt="Antrenoare Ilinca Bucur">
+                            
+                            <!-- Desktop Overlay (Vizibil doar de la md:) -->
+                            <div class="hidden md:flex opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/50 transition-opacity duration-300 items-center justify-center gap-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-white text-gray-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors duration-200" aria-label="Facebook">
+                                    <i class="fa-brands fa-facebook text-lg"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-white text-gray-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors duration-200" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="flex items-start justify-between gap-2 mb-3">
+                                <div>
+                                    <span class="inline-block text-xs font-bold uppercase tracking-wider text-red-600 mb-0.5">Yoga</span>
+                                    <h3 class="text-xl font-bold text-gray-900">Ilinca Bucur</h3>
+                                </div>
+
+                                <!-- Mobile Social Icons (Ascunse de la md:) -->
+                                <div class="flex items-center gap-3 md:hidden pt-4">
+                                    <a href="#" class="text-gray-500 hover:text-red-600 transition-colors" aria-label="Facebook">
+                                        <i class="fa-brands fa-facebook text-xl"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-500 hover:text-red-600 transition-colors" aria-label="Instagram">
+                                        <i class="fa-brands fa-instagram text-xl"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2 text-sm text-gray-600 mb-4">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-award text-red-500"></i><span>Certificat Yoga RYT 500</span></div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-award text-red-500"></i><span>Master Pilates</span></div>
+                            </div>
+                            <div class="pt-3 border-t border-gray-100 flex items-start gap-2 text-sm font-medium text-amber-600">
+                                <i class="fa-solid fa-trophy text-base mt-0.5 shrink-0"></i>
+                                <span>Peste 300 ore predate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3: Marius Radu -->
+                <div class="trainer-card-item" data-specialty="cardio">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        
+                        <div class="relative overflow-hidden aspect-4/3 sm:aspect-video md:aspect-4/3">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                src="./img/trainers/cardio_trainer.webp"
+                                alt="Antrenor Marius Radu">
+                            
+                            <!-- Desktop Overlay (Vizibil doar de la md:) -->
+                            <div class="hidden md:flex opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/50 transition-opacity duration-300 items-center justify-center gap-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-white text-gray-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors duration-200" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram text-lg"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-white text-gray-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors duration-200" aria-label="Twitter">
+                                    <i class="fa-brands fa-x-twitter text-md"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="flex items-start justify-between gap-2 mb-3">
+                                <div>
+                                    <span class="inline-block text-xs font-bold uppercase tracking-wider text-red-600 mb-0.5">Cardio</span>
+                                    <h3 class="text-xl font-bold text-gray-900">Marius Radu</h3>
+                                </div>
+
+                                <!-- Mobile Social Icons (Ascunse de la md:) -->
+                                <div class="flex items-center gap-3 md:hidden pt-4">
+                                    <a href="#" class="text-gray-500 hover:text-red-600 transition-colors" aria-label="Instagram">
+                                        <i class="fa-brands fa-instagram text-xl"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-500 hover:text-red-600 transition-colors" aria-label="Twitter">
+                                        <i class="fa-brands fa-x-twitter text-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2 text-sm text-gray-600 mb-4">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-award text-red-500"></i><span>Certificat ISSA</span></div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-award text-red-500"></i><span>IFBB Academy Moldova</span></div>
+                            </div>
+                            <div class="pt-3 border-t border-gray-100 flex items-start gap-2 text-sm font-medium text-amber-600">
+                                <i class="fa-solid fa-trophy text-base mt-0.5 shrink-0"></i>
+                                <span>Maratonist de top, 5x Ironman</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CARD 4: Mihai Popa -->
+                <div class="trainer-card-item" data-specialty="yoga">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        
+                        <div class="relative overflow-hidden aspect-4/3 sm:aspect-video md:aspect-4/3">
+                            <img class="w-full h-full object-cover object-[center_20%] transition-transform duration-500 group-hover:scale-105"
+                                src="./img/trainers/yoga_trainer(2).webp"
+                                alt="Antrenoare Mihai Popa">
+                            
+                            <!-- Desktop Overlay (Vizibil doar de la md:) -->
+                            <div class="hidden md:flex opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/50 transition-opacity duration-300 items-center justify-center gap-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-white text-gray-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors duration-200" aria-label="Facebook">
+                                    <i class="fa-brands fa-facebook text-lg"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-white text-gray-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors duration-200" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="flex items-start justify-between gap-2 mb-3">
+                                <div>
+                                    <span class="inline-block text-xs font-bold uppercase tracking-wider text-red-600 mb-0.5">Yoga</span>
+                                    <h3 class="text-xl font-bold text-gray-900">Mihai Popa</h3>
+                                </div>
+
+                                <!-- Mobile Social Icons (Ascunse de la md:) -->
+                                <div class="flex items-center gap-3 md:hidden pt-4">
+                                    <a href="#" class="text-gray-500 hover:text-red-600 transition-colors" aria-label="Facebook">
+                                        <i class="fa-brands fa-facebook text-xl"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-500 hover:text-red-600 transition-colors" aria-label="Instagram">
+                                        <i class="fa-brands fa-instagram text-xl"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2 text-sm text-gray-600 mb-4">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-award text-red-500"></i><span>Certificat Yoga RYT 200</span></div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-award text-red-500"></i><span>USEFS</span></div>
+                            </div>
+                            <div class="pt-3 border-t border-gray-100 flex items-start gap-2 text-sm font-medium text-amber-600">
+                                <i class="fa-solid fa-trophy text-base mt-0.5 shrink-0"></i>
+                                <span>Peste 200 clienți mulțumiți</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 5: Ștefan Mincescu -->
+                <div class="trainer-card-item" data-specialty="forta">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+
+                        <div class="relative overflow-hidden aspect-4/3 sm:aspect-video md:aspect-4/3">
+                            <img class="w-full h-full object-cover object-[center_20%] transition-transform duration-500 group-hover:scale-105"
+                                src="./img/trainers/power_trainer(2).webp"
+                                alt="Antrenor Ștefan Mincescu">
+
+                            <!-- Desktop Overlay (Vizibil doar de la md:) -->
+                            <div class="hidden md:flex opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/50 transition-opacity duration-300 items-center justify-center gap-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-white text-gray-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors duration-200" aria-label="Facebook">
+                                    <i class="fa-brands fa-facebook text-lg"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-white text-gray-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors duration-200" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram text-lg"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-white text-gray-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors duration-200" aria-label="Twitter">
+                                    <i class="fa-brands fa-x-twitter text-md"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="flex items-start justify-between gap-2 mb-3">
+                                <div>
+                                    <span class="inline-block text-xs font-bold uppercase tracking-wider text-red-600 mb-0.5">Forță</span>
+                                    <h3 class="text-xl font-bold text-gray-900">Ștefan Mincescu</h3>
+                                </div>
+
+                                <!-- Mobile Social Icons (Ascunse de la md:) -->
+                                <div class="flex items-center gap-3 md:hidden pt-4">
+                                    <a href="#" class="text-gray-500 hover:text-red-600 transition-colors" aria-label="Facebook">
+                                        <i class="fa-brands fa-facebook text-xl"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-500 hover:text-red-600 transition-colors" aria-label="Instagram">
+                                        <i class="fa-brands fa-instagram text-xl"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-500 hover:text-red-600 transition-colors" aria-label="Twitter">
+                                        <i class="fa-brands fa-x-twitter text-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2 text-sm text-gray-600 mb-4">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-award text-red-500"></i><span>ACE Personal Trainer</span></div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-award text-red-500"></i><span>CrossFit Level 1</span></div>
+                            </div>
+                            <div class="pt-3 border-t border-gray-100 flex items-start gap-2 text-sm font-medium text-amber-600">
+                                <i class="fa-solid fa-trophy text-base mt-0.5 shrink-0"></i>
+                                <span>Campion Național la Powerlifting în 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 6: Gheorghe Vasiliu -->
+                <div class="trainer-card-item" data-specialty="cardio">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        
+                        <div class="relative overflow-hidden aspect-4/3 sm:aspect-video md:aspect-4/3">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                src="./img/trainers/cardio_trainer(2).webp"
+                                alt="Antrenor Gheorghe Vasiliu">
+                            
+                            <!-- Desktop Overlay (Vizibil doar de la md:) -->
+                            <div class="hidden md:flex opacity-0 group-hover:opacity-100 absolute inset-0 bg-black/50 transition-opacity duration-300 items-center justify-center gap-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-white text-gray-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors duration-200" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram text-lg"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-white text-gray-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors duration-200" aria-label="Twitter">
+                                    <i class="fa-brands fa-x-twitter text-md"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="flex items-start justify-between gap-2 mb-3">
+                                <div>
+                                    <span class="inline-block text-xs font-bold uppercase tracking-wider text-red-600 mb-0.5">Cardio</span>
+                                    <h3 class="text-xl font-bold text-gray-900">Gheorghe Vasiliu</h3>
+                                </div>
+
+                                <!-- Mobile Social Icons (Ascunse de la md:) -->
+                                <div class="flex items-center gap-3 md:hidden pt-4">
+                                    <a href="#" class="text-gray-500 hover:text-red-600 transition-colors" aria-label="Instagram">
+                                        <i class="fa-brands fa-instagram text-xl"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-500 hover:text-red-600 transition-colors" aria-label="Twitter">
+                                        <i class="fa-brands fa-x-twitter text-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2 text-sm text-gray-600 mb-4">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-award text-red-500"></i><span>Calificat TRX</span></div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-award text-red-500"></i><span>USEFS</span></div>
+                            </div>
+                            <div class="pt-3 border-t border-gray-100 flex items-start gap-2 text-sm font-medium text-amber-600">
+                                <i class="fa-solid fa-trophy text-base mt-0.5 shrink-0"></i>
+                                <span>Maratonist de elită</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- baner -->
+            <div class="champions-banner fade-in bg-[#212121] rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl text-white">
+                <div class="grow text-center md:text-left">
+                    <h2 class="text-xl md:text-2xl font-black uppercase tracking-wide mb-2">
+                        Campioni Naționali <span class="text-red-500">la Fitness</span>
+                    </h2>
+                    <p class="text-gray-300 text-sm md:text-base max-w-3xl">
+                        Echipa noastră a câștigat trofeul „Cel mai bun club de fitness din sudul Moldovei" pentru 3 ani
+                        consecutiv. Ne mândrim cu rezultatele membrilor noștri!
+                    </p>
+                </div>
+                <div class="w-16 h-16 rounded-full bg-yellow flex items-center justify-center text-amber-400 text-3xl">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-[#212121] text-neutral-400 py-12 border-t border-neutral-800">
+        <div class="container mx-auto px-4 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <a href="./index.html" class="font-bold text-xl uppercase tracking-wide">
+                    <span class="text-white">ACTIVE</span>
+                    <span class="text-[#e53935]">LIFE</span>
+                </a>
+                <p class="text-sm">Transformă-ți corpul, depășește-ți limitele și trăiește o viață activă și sănătoasă.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-['Bebas_Neue'] text-xl mb-4 tracking-wide">Linkuri Rapide</h4>
+                <ul class="flex flex-col gap-2 text-sm">
+                    <li><a href="./programs.html" class="hover:text-[#E53935] transition-colors">Programe</a></li>
+                    <li><a href="./trainers.html" class="hover:text-[#E53935] transition-colors">Antrenori</a></li>
+                    <li><a href="./schedule.html" class="hover:text-[#E53935] transition-colors">Orar</a></li>
+                    <li><a href="./memberships.html" class="hover:text-[#E53935] transition-colors">Abonamente</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-['Bebas_Neue'] text-xl mb-4 tracking-wide">Contact</h4>
+                <ul class="flex flex-col gap-2 text-sm">
+                    <li><i class="fa-solid fa-location-dot mr-2"></i>Str. Sportului 10, Cahul</li>
+                    <li><i class="fa-solid fa-phone mr-2"></i>+373 60 000 000</li>
+                    <li><i class="fa-solid fa-envelope mr-2"></i>contact@activelife.md</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-['Bebas_Neue'] text-xl mb-4 tracking-wide">Urmărește-ne</h4>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-[#E53935] transition-colors"><i
+                            class="fa-brands fa-facebook text-xl"></i></a>
+                    <a href="#" class="hover:text-[#E53935] transition-colors"><i
+                            class="fa-brands fa-instagram text-xl"></i></a>
+                    <a href="#" class="hover:text-[#E53935] transition-colors"><i
+                            class="fa-brands fa-twitter text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 lg:px-8 mt-8 pt-8 border-t border-neutral-800 text-center text-sm">
+            <p>&copy; 2026 Centru Fitness "Active Life". Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
