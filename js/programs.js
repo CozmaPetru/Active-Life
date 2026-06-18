@@ -1,13 +1,10 @@
 // Filtrare programe
 function initProgramFilters() {
-    // UPDATED: Matches the HTML class '.program-filter-btn'
     const filterBtns = document.querySelectorAll('.program-filter-btn');
-    // UPDATED: Matches the HTML wrapper class '.program-card-item'
     const cards = document.querySelectorAll('.program-card-item');
 
     if (!filterBtns.length || !cards.length) return;
 
-    // Tailwind utility styles matching your active/inactive pill buttons
     const activeClasses = ['bg-red-600', 'text-white', 'shadow-sm'];
     const inactiveClasses = ['bg-white', 'text-gray-700', 'border', 'border-gray-200', 'hover:bg-gray-50'];
 
@@ -15,7 +12,7 @@ function initProgramFilters() {
         filterBtns.forEach(btn => {
             btn.classList.remove(...activeClasses);
             btn.classList.add(...inactiveClasses);
-            btn.classList.remove('active'); // Clear structural state class if any
+            btn.classList.remove('active');
         });
         activeBtn.classList.remove(...inactiveClasses);
         activeBtn.classList.add(...activeClasses);
@@ -24,79 +21,77 @@ function initProgramFilters() {
 
     function filterCards(type) {
         cards.forEach(card => {
-            // UPDATED: HTML code uses 'all' instead of 'toate' for the master filter
             const show = type === 'all' || card.dataset.type === type;
-            
-            if (show) {
-                card.classList.remove('hidden');
-                // Optional: Re-trigger an animation framework class if applicable
-                card.classList.add('fade-in'); 
-            } else {
-                card.classList.add('hidden');
-            }
+            card.classList.toggle('hidden', !show);
+            if (show) card.classList.add('fade-in');
         });
     }
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             setActiveButton(btn);
-            filterCards(btn.dataset.filter); // Reads data-filter="all", "cardio", etc.
+            filterCards(btn.dataset.filter);
         });
     });
 }
 
-// Acordion programe
-function initProgramsAccordion() {
-    // UPDATED: Matches the HTML ID 'programsAccordion' (CamelCase)
-    const accordion = document.getElementById('programsAccordion');
-    if (!accordion) return;
+// Acordion pe cardurile de program
+function initProgramCardAccordion() {
+    const cards = document.querySelectorAll('.program-card-item');
 
-    // UPDATED: Matches Bootstrap framework class markup '.accordion-item'
-    const items = accordion.querySelectorAll('.accordion-item');
+    cards.forEach(card => {
+        const btn = card.querySelector('.program-details-btn');
+        const panel = card.querySelector('.program-details-panel');
+        if (!btn || !panel) return;
 
-    function openItem(targetItem) {
-        items.forEach(item => {
-            const shouldBeOpen = item === targetItem;
-            
-            // UPDATED: Target Bootstrap internal layout elements inside your HTML
-            const button = item.querySelector('.accordion-button');
-            const collapsePanel = item.querySelector('.accordion-collapse');
+        btn.addEventListener('click', () => {
+            const isOpen = !panel.classList.contains('hidden');
 
-            if (shouldBeOpen) {
-                // Button states
-                button.classList.remove('collapsed');
-                button.setAttribute('aria-expanded', 'true');
-                
-                // Content section transitions
-                collapsePanel.classList.add('show');
-                collapsePanel.style.display = 'block'; // Fallback display mechanism
-            } else {
-                // Button states
-                button.classList.add('collapsed');
-                button.setAttribute('aria-expanded', 'false');
-                
-                // Content section transitions
-                collapsePanel.classList.remove('show');
-                collapsePanel.style.display = 'none';
-            }
+            cards.forEach(other => {
+                if (other === card) return;
+                other.querySelector('.program-details-panel')?.classList.add('hidden');
+                const otherBtn = other.querySelector('.program-details-btn');
+                if (otherBtn) otherBtn.textContent = 'Vezi detalii';
+            });
+
+            panel.classList.toggle('hidden', isOpen);
+            btn.textContent = isOpen ? 'Vezi detalii' : 'Ascunde detalii';
         });
-    }
+    });
+}
+
+// Acordion FAQ - Informații utile
+function initFaqAccordion() {
+    const items = document.querySelectorAll('.faq-item');
+    if (!items.length) return;
 
     items.forEach(item => {
-        const triggerButton = item.querySelector('.accordion-button');
-        
-        triggerButton.addEventListener('click', (e) => {
-            e.preventDefault(); // Stop native Bootstrap JS interference if both are present
-            
-            const collapsePanel = item.querySelector('.accordion-collapse');
-            const isAlreadyOpen = collapsePanel.classList.contains('show');
-            
-            openItem(isAlreadyOpen ? null : item);
+        const trigger = item.querySelector('.faq-trigger');
+        const panel = item.querySelector('.faq-panel');
+        const icon = trigger?.querySelector('.fa-chevron-down');
+        if (!trigger || !panel) return;
+
+        trigger.addEventListener('click', () => {
+            const isOpen = !panel.classList.contains('hidden');
+
+            items.forEach(other => {
+                other.querySelector('.faq-panel')?.classList.add('hidden');
+                other.querySelector('.faq-trigger')?.classList.remove('bg-red-50');
+                const otherIcon = other.querySelector('.fa-chevron-down');
+                if (otherIcon) otherIcon.style.transform = '';
+            });
+
+            if (!isOpen) {
+                panel.classList.remove('hidden');
+                trigger.classList.add('bg-red-50');
+                if (icon) icon.style.transform = 'rotate(180deg)';
+            }
         });
     });
 }
-
+// Executa evenimentul dupa ce sa incarcat tot html-ul
 document.addEventListener('DOMContentLoaded', () => {
     initProgramFilters();
-    initProgramsAccordion();
+    initProgramCardAccordion();
+    initFaqAccordion();
 });
