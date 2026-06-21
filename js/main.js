@@ -71,40 +71,6 @@ function initBeforeAfterSliders() {
     });
 }
 
-// Counter
-function initCounters() {
-    const counters = document.querySelectorAll(".counter-number");
-    if (!counters.length) return;
-
-    function animate(counter) {
-        const target = Number(counter.dataset.target);
-        const duration = 1500;
-        const start = performance.now();
-
-        function tick(now) {
-            const progress = Math.min((now - start) / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            counter.textContent = Math.floor(target * eased).toLocaleString("ro-RO");
-            if (progress < 1) {
-                requestAnimationFrame(tick);
-            } else {
-                counter.textContent = target.toLocaleString("ro-RO");
-            }
-        }
-        requestAnimationFrame(tick);
-    }
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            animate(entry.target);
-            observer.unobserve(entry.target);
-        });
-    }, {
-        threshold: 0.2
-    });
-    counters.forEach(counter => observer.observe(counter));
-}
 
 // Filtrare antrenori
 function initTrainerFilter() {
@@ -132,10 +98,22 @@ function initTrainerFilter() {
         });
     });
 }
+
+// Buton Back to top
+function BackToTop() {
+    const btn = document.querySelector('#back-to-top');
+    if (!btn) return;
+    window.addEventListener('scroll', function () {
+        btn.classList.toggle('visible', window.pageYOffset > 400);
+    });
+    btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
 // Initializare aplicatie
 document.addEventListener("DOMContentLoaded", () => {
     initMobileMenu();
     initBeforeAfterSliders();
-    initCounters();
     initTrainerFilter();
+    BackToTop();
 });
