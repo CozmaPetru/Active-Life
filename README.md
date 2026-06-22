@@ -5,7 +5,7 @@ Active Life este un site web complet și responsive pentru un centru fitness fic
 
 
 ## Demo online
-(https://your-username.github.io/active-life)
+(https://cozmapetru.github.io/Active-Life/)
 
 
 ## Tehnologii utilizate
@@ -55,7 +55,7 @@ ACTIVE LIFE/
     ├── gallery/            # galerie de imagini
     └── transformations/    # imagini Înainte/După
 
-
+</pre>
 ## Paginile site-ului
 | Pagină        | Fișier             | Conținut principal |
 |---            |---                 |---|
