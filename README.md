@@ -9,6 +9,7 @@ Active Life este un site web complet și responsive pentru un centru fitness fic
 
 
 ## Tehnologii utilizate
+<pre>
 | Categorie         | Tehnologie |
 
 | Marcare           | HTML5 (structură semantică) |
@@ -21,7 +22,7 @@ Active Life este un site web complet și responsive pentru un centru fitness fic
 | Hosting           | GitHub Pages|
 | Fonturi           | Google Fonts (Bebas Neue / Roboto) |
 | Iconițe           | Font Awesome 6 |
-
+</pre>
 
 ## Structura proiectului
 <pre>
