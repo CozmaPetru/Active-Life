@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
     <link href="./src/output.css" rel="stylesheet">
 </head>
 
@@ -22,7 +23,7 @@
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
                 <a href="./index.html" class="flex items-center gap-2">
-                    <img src="./img/gallery/Logo(black).png" alt="Active Life Logo" class="h-10 w-auto">
+                    <img src="./img/gallery/Logo(black).png" alt="Active Life Logo" width="40" height="40" class="h-10 w-auto">
                     <div class="font-bold text-xl uppercase tracking-wide leading-none">
                         <span class="text-white">ACTIVE</span>
                         <span class="text-[#e53935]">LIFE</span>
@@ -84,9 +85,13 @@
 
     <!-- sectionea HERO -->
     <section class="relative min-h-dvh flex items-center justify-center overflow-hidden py-12 md:py-20">
-        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style="background-image: url('./img/hero/hero.webp');">
-        </div>
+        <img 
+            src="./img/hero/hero.webp" 
+            alt="Active Life gym"
+            fetchpriority="high"
+            width="1920" height="1080"
+            class="absolute inset-0 w-full h-full object-cover  brightness-[0.4]"
+        />
         <div class="absolute inset-0 bg-[#212121]/60"></div>
         <div
             class="relative z-10 text-left px-14 sm:px-16 lg:px-18  sm:w-full flex flex-col justify-center items-center sm:items-start">
@@ -124,7 +129,9 @@
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-7">
                 <a class="block group overflow-hidden rounded-2xl relative aspect-3/4">
                     <img src="./img/programs/Forta.webp" alt="Program Forță Active Life"
-                        class="w-full h-full brightness-70 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        class="w-full h-full brightness-70 object-cover transition-transform duration-500 group-hover:scale-110" 
+                    loading="lazy"    
+                    />
                     <div class="flex flex-col justify-end absolute inset-0 items-start p-5">
                         <h3 class="text-white text-xl font-bold uppercase tracking-wider">Forță</h3>
                         <p class="hidden lg:block text-white text-[15px] font-medium tracking-wide mt-1">Construiește
@@ -134,7 +141,9 @@
 
                 <a class="block group overflow-hidden rounded-2xl relative aspect-3/4">
                     <img src="./img/programs/Cardio.webp" alt="Program Cardio Active Life"
-                        class="w-full h-full brightness-70 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        class="w-full h-full brightness-70 object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"    
+                    />
                     <div class="flex flex-col justify-end absolute inset-0 items-start p-5">
                         <h3 class="text-white text-xl font-bold uppercase tracking-wider">Cardio</h3>
                         <p class="hidden lg:block text-white text-[15px] font-medium tracking-wide mt-1">Arde caloriile
@@ -144,7 +153,9 @@
 
                 <a class="block group overflow-hidden rounded-2xl relative aspect-3/4">
                     <img src="./img/programs/Yoga.webp" alt="Program Yoga Active Life"
-                        class="w-full h-full brightness-70 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        class="w-full h-full brightness-70 object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"    
+                    />
                     <div class="flex flex-col justify-end absolute inset-0 items-start p-5">
                         <h3 class="text-white text-xl font-bold uppercase tracking-wider">Yoga</h3>
                         <p class="hidden lg:block text-white text-[15px] font-medium tracking-wide mt-1">Îmbunătățește
@@ -154,7 +165,9 @@
 
                 <a class="block group overflow-hidden rounded-2xl relative aspect-3/4">
                     <img src="./img/programs/Crossfit.webp" alt="Program CrossFit Active Life"
-                        class="w-full h-full brightness-70 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        class="w-full h-full brightness-70 object-cover transition-transform duration-500 group-hover:scale-110"
+                        loading="lazy"
+                    />
                     <div class="flex flex-col justify-end absolute inset-0 items-start p-5">
                         <h3 class="text-white text-xl font-bold uppercase tracking-wider">CrossFit</h3>
                         <p class="hidden lg:block text-white text-[15px] font-medium tracking-wide mt-1">Antrenamente
@@ -391,7 +404,7 @@
         id="back-to-top">
         <i class="fa-solid fa-arrow-up text-xl"></i>
     </button>
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js" defer></script>
 </body>
 
 </html>
