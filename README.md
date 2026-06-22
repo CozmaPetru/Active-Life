@@ -26,33 +26,33 @@ Active Life este un site web complet și responsive pentru un centru fitness fic
 ## Structura proiectului
 ACTIVE LIFE/
 │
-├-- index.html          # Pagina Acasă
-├-- programs.html       # Pagina Programe
-├-- trainers.html       # Pagina Antrenori
-├-- schedule.html       # Pagina Orar
-├-- memberships.html    # Pagina Abonamente
-├-- contact.html        # Pagina Contact
-├-- README.md
-├-- package-lock.json
-├-- package.json
+├── index.html              # Home page
+├── programs.html           # Programs page
+├── trainers.html           # Trainers page
+├── schedule.html           # Schedule page
+├── memberships.html        # Memberships page
+├── contact.html            # Contact page
+├── README.md
+├── package.json
+├── package-lock.json
 │
 ├── src/
-│   └-- input.css
-    |-- output.css           
+│   ├── input.css
+│   └── output.css
 │
-├-- js/
-│   ├-- main.js             # Funcționalități comune
-│   ├-- validation.js       # Validare formular contact
-│   ├-- calculator.js       # Calculator BMI
-│   └-- programs.js         # Filtrare programe
-    └-- schedule.js         # Filtrare orar clase
+├── js/
+│   ├── main.js             # Common functionality
+│   ├── validation.js       # Contact form validation
+│   ├── calculator.js       # BMI calculator
+│   ├── programs.js         # Program filtering
+│   └── schedule.js         # Schedule filtering
 │
 └── img/
-    ├-- hero/               # Imagini secțiuni hero
-    ├-- programs/           # Imagini programe antrenament
-    ├-- trainers/           # Fotografii antrenori
-    ├-- gallery/            # Galerie foto
-    └-- transformations/    # Imagini before/after
+    ├── hero/               # Hero section images
+    ├── programs/           # Training program images
+    ├── trainers/           # Trainer photos
+    ├── gallery/            # Image gallery
+    └── transformations/    # Before & after images
 
 
 ## Paginile site-ului
