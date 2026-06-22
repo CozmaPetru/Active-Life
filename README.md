@@ -24,6 +24,7 @@ Active Life este un site web complet și responsive pentru un centru fitness fic
 
 
 ## Structura proiectului
+<pre>
 ACTIVE LIFE/
 │
 ├── index.html              # Home page pagina Acasa
