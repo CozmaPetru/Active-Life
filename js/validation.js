@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 body: new FormData(form),
             });
 
-            if (response.ok) {
+            if (response.ok) { 
                 // Succes
                 form.reset();
                 successBox.classList.remove("hidden");
