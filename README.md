@@ -28,12 +28,12 @@ Active Life este un site web complet și responsive pentru un centru fitness fic
 <pre>
 ACTIVE LIFE/
 │
-├── index.html              # Home page pagina Acasa
-├── programs.html           # Programs page pagina Programe
-├── trainers.html           # Trainers page pagina Antrenori
-├── schedule.html           # Schedule page pagina Orar
-├── memberships.html        # Memberships page pagina Abonamente
-├── contact.html            # Contact page pagina Contact
+├── index.html              # pagina Acasa
+├── programs.html           # pagina Programe
+├── trainers.html           # pagina Antrenori
+├── schedule.html           # pagina Orar
+├── memberships.html        # pagina Abonamente
+├── contact.html            # pagina Contact
 ├── README.md
 ├── package.json
 ├── package-lock.json
